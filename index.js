@@ -13,6 +13,11 @@ function convertBytesToMegabyes(bytes) {
   return (parseFloat(bytes) / 1024.0) / 1024.0;
 }
 
+/**
+ * Constructor
+ *
+ * @param {Object} options Currently only acceps "uploadLimit", in M. Default 16M
+ */
 function Pluploader(options) {
   this.options = options || {
     uploadLimit: 16
