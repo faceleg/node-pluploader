@@ -27,7 +27,7 @@ function Pluploader(options) {
   this.pendingUploads = {};
 
   // Initiate stale upload checking
-  setInterval(this.deleteStalledUploads, FIVE_MINUTES);
+  setInterval(this.deleteStalledUploads.bind(this), FIVE_MINUTES);
 }
 
 util.inherits(Pluploader, events.EventEmitter);
