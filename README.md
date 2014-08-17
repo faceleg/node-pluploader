@@ -30,6 +30,7 @@ pluploader.on('error', function(error) {
     throw error;
 });
 
+// This example assumes you're using Express
 app.post('/upload', function(req, res){
   pluploader.handleRequest(req, res);
 });
