@@ -1,0 +1,21 @@
+{
+  "name": "node-pluploader",
+  "version": "0.0.1",
+  "author": "Michael Robinson <mike@pagesofinterest.net>",
+  "description": "Process Plupload uploads with style. And events",
+  "contributors": [
+    {
+      "name": "Michael Robinson",
+      "email": "mike@pagesofinterest.net"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrownPaperBag/pluploader"
+  },
+  "dependencies": {
+    "multiparty": "latest",
+    "mmmagic": "latest",
+    "bluebird": "latest"
+  }
+}
