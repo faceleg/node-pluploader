@@ -7,8 +7,13 @@ Handles Plupload's chunked uploads so you don't have to.
 ```JavaScript
 var Pluploader = require('node-pluploader');
 
+// These options are also passed through to multiparty Form
+// instances. See https://github.com/andrewrk/node-multiparty#multipartyform
 var pluploader = new Pluploader({
-  uploadLimit: 16
+  // Optional - defaults to 16. Expressed in MB
+  uploadLimit: 16,
+  // Optional - defaults to os.tmpDir()
+  uploadDir: '/custom/upload-directory'
 });
 
 /*
