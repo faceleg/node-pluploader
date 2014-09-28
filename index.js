@@ -110,7 +110,7 @@ Pluploader.prototype.uploadLimitReached = function(fileIdentifier) {
  */
 Pluploader.prototype.handleRequest = function plupload(req, res) {
 
-  var form = new multiparty.Form(),
+  var form = new multiparty.Form(this.options),
     self = this;
 
   form.parse(req, function(err, fields, files) {
