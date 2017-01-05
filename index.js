@@ -4,8 +4,8 @@ var multiparty = require('multiparty'),
   Promise = require('bluebird'),
   fs = Promise.promisifyAll(require('fs')),
   mmmagic = require('mmmagic'),
+  path = require("path"),
   Magic = mmmagic.Magic;
-  path = require("path");
 
 var FIVE_MINUTES = 1000 * 60 * 5,
   magic = new Magic(mmmagic.MAGIC_MIME_TYPE);
