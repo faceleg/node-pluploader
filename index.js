@@ -5,6 +5,7 @@ var multiparty = require('multiparty'),
   fs = Promise.promisifyAll(require('fs')),
   mmmagic = require('mmmagic'),
   Magic = mmmagic.Magic;
+  path = require("path");
 
 var FIVE_MINUTES = 1000 * 60 * 5,
   magic = new Magic(mmmagic.MAGIC_MIME_TYPE);
@@ -146,6 +147,7 @@ Pluploader.prototype.handleRequest = function plupload(req, res) {
           res.json({
             'jsonrpc': '2.0',
             'id': fileData.name,
+            'tmpFileName': path.basename(files.file[0].path)
             'error': {
               code: 500,
               'message': 'File size exceeds upload limit of ' + self.options.uploadLimit + 'M'
@@ -153,9 +155,11 @@ Pluploader.prototype.handleRequest = function plupload(req, res) {
           });
         } else {
           self.finalizePendingUploads(req);
+          console.log('handle request', path.basename(files.file[0].path))
           res.json({
             'jsonrpc': '2.0',
             'id': fileData.name,
+            'tmpFileName': path.basename(files.file[0].path)
           });
         }
       });
