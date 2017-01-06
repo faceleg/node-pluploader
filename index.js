@@ -146,7 +146,6 @@ Pluploader.prototype.handleRequest = function plupload(req, res) {
           res.json({
             'jsonrpc': '2.0',
             'id': fileData.name,
-            'tmpFileName': path.basename(files.file[0].path),
             'error': {
               code: 500,
               'message': 'File size exceeds upload limit of ' + self.options.uploadLimit + 'M'
