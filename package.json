@@ -1,6 +1,6 @@
 {
   "name": "node-pluploader",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Michael Robinson <mike@pagesofinterest.net>",
   "description": "Process Plupload uploads with style. And events",
   "contributors": [
