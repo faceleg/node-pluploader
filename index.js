@@ -152,10 +152,13 @@ Pluploader.prototype.handleRequest = function plupload(req, res) {
             },
           });
         } else {
+          
+          var filesData = self.pendingUploads[fileIdentifier];
           self.finalizePendingUploads(req);
+          
           res.json({
             'jsonrpc': '2.0',
-            'id': fileData.name,
+            'id': filesData.name
           });
         }
       });
